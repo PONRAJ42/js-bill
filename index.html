@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="html,css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BILL</title>
+	
+	<link href="css/style.css" rel="stylesheet">
+  
+</head> 
+		<body>
+		
+				<fieldset>
+				<h6><b>V.M.PONRA HOTEL<b><h6>
+				<div class="ac">
+		                <label for="amount"class="i1">Bill Amount : </label>
+						<input type="text" id="amount" class="i1" ><br><br>
+				
+						<label for="tip" class="i2">Tips in %:</label>
+						<input type="text" id="tip" class="i2" ><br><br>
+				
+						<label for="rupees"class="i3">Tips in rupees: </label>
+						<input type="text" id="rupees"class="i3" disabled  ><br><br>
+				
+						<label for="pay" class="i4" > Final Pay:</label>
+						<input type="text" id="pay" class="i4" disabled ><br><br>
+				 
+						
+						<button id="vm">ENTER</button>
+				</div>
+				</fieldset>	
+			<div class="l2">
+			<p id="h5"></p>
+			</div>		
+		</body>
+		<script>
+			let button = document.getElementById('vm');
+
+			button.addEventListener('click',hotel)
+				function hotel(){
+				let a = document.getElementById('amount').value;
+
+				let  b= document.getElementById('tip').value;
+						let c=a*(b/100);
+				document.getElementById('rupees').value=c;
+				    let d=parseInt(a)+c;
+				 document.getElementById('pay').value=d;
+
+				<!-- let v=document.getElementById('h5'); -->
+				<!-- let w="TOTAL AMOUNT : "+d; -->
+				<!-- v.innerText=w; -->
+				}
+				
+		</script>
+		</html>
